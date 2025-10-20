@@ -1,0 +1,32 @@
+{
+  "name": "reporting-map",
+  "version": "1.0.0",
+  "description": "Hyperlocal Real-Time Incident Reporting Map - A civic tech application for reporting and tracking local incidents",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup-atlas": "node update-atlas-uri.js",
+    "backup": "node backup.js backup",
+    "backup:atlas": "node backup.js backup-to-atlas",
+    "backup:upload": "node backup.js upload",
+    "restore": "node backup.js restore",
+    "restore:atlas": "node backup.js restore-from-atlas",
+    "restore:download": "node backup.js download",
+    "backup:list": "node backup.js list",
+    "backup:scheduler": "node backup-scheduler.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1",
+    "node-cron": "^4.2.1",
+    "socket.io": "^4.8.1"
+  }
+}

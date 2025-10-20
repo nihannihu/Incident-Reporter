@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 Hyperlocal Incident Reporter</title>
+    
+    <!-- Leaflet.js for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-map-marked-alt"></i> Hyperlocal Incident Reporter</h1>
+                <p class="subtitle">Report and track local incidents in real-time</p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="incident-count">0</span>
+                    <span class="stat-label">Active Incidents</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span id="online-count">0</span>
+                    <span class="stat-label">Users Online</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Map Container -->
+        <div id="map"></div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="my-location-btn" class="control-btn" title="Go to my location">
+                <i class="fas fa-location-crosshairs"></i> My Location
+            </button>
+            <button id="refresh-btn" class="control-btn" title="Refresh incidents">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+            <button id="report-btn" class="control-btn primary" title="Report new incident">
+                <i class="fas fa-plus-circle"></i> Report Incident
+            </button>
+        </div>
+
+        <!-- Report Form Modal -->
+        <div id="modal-backdrop" class="modal-backdrop"></div>
+        <div id="report-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2><i class="fas fa-file-alt"></i> Report New Incident</h2>
+                    <button class="close-btn" id="close-modal">&times;</button>
+                </div>
+                <form id="report-form">
+                    <!-- Instruction Banner -->
+                    <div class="instruction-banner" id="instruction-banner">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Location selected!</strong> Now fill out the form below and submit your report.
+                    </div>
+
+                    <div class="form-group">
+                        <label for="incident-type">
+                            <i class="fas fa-list"></i> Incident Type *
+                        </label>
+                        <select id="incident-type" required>
+                            <option value="">Select incident type</option>
+                            <option value="traffic_jam">🚗 Traffic Jam</option>
+                            <option value="road_closure">🚧 Road Closure</option>
+                            <option value="waterlogging">💧 Waterlogging</option>
+                            <option value="power_outage">⚡ Power Outage</option>
+                            <option value="accident">🚑 Accident</option>
+                            <option value="construction">🏗️ Construction</option>
+                            <option value="other">📝 Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">
+                            <i class="fas fa-comment"></i> Description *
+                        </label>
+                        <textarea 
+                            id="description" 
+                            rows="4" 
+                            maxlength="500"
+                            placeholder="Describe the incident in detail..."
+                            required
+                        ></textarea>
+                        <small id="char-count">0 / 500</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-map-pin"></i> Location
+                        </label>
+                        <div class="location-info">
+                            <p id="selected-location">Click on the map to select a location</p>
+                            <input type="hidden" id="latitude">
+                            <input type="hidden" id="longitude">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancel-btn">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Submit Report
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toast-container"></div>
+    </div>
+
+    <!-- MapTiler SDK JS (already loaded in head) -->
+    
+    <!-- Socket.IO Client -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
