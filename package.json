@@ -1,7 +1,7 @@
 {
-  "name": "reporting-map",
+  "name": "incident-reporter",
   "version": "1.0.0",
-  "description": "Hyperlocal Real-Time Incident Reporting Map - A civic tech application for reporting and tracking local incidents",
+  "description": "Hyperlocal Real-Time Incident Reporting Map - A civic tech application for reporting and tracking local incidents like traffic jams, road closures, waterlogging, and power outages in real-time on an interactive map. Built with Node.js, MongoDB, and Socket.IO.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -17,9 +17,34 @@
     "backup:list": "node backup.js list",
     "backup:scheduler": "node backup-scheduler.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "incident-reporting",
+    "real-time-map",
+    "community-safety",
+    "civic-tech",
+    "traffic-jam",
+    "power-outage",
+    "road-closure",
+    "emergency-alerts",
+    "geospatial",
+    "websocket",
+    "mongodb",
+    "nodejs",
+    "express",
+    "socket-io",
+    "leaflet",
+    "hyperlocal"
+  ],
+  "author": "Nihan <nihannihu>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nihannihu/Incident-Reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nihannihu/Incident-Reporter/issues"
+  },
+  "homepage": "https://github.com/nihannihu/Incident-Reporter#readme",
   "dependencies": {
     "axios": "^1.12.2",
     "cors": "^2.8.5",
