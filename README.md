@@ -1,14 +1,20 @@
-# Hyperlocal Real-Time Incident Reporting Map
+# Hyperlocal Real-Time Incident Reporting Map by Nihan Nihu (nihannihu)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-14.x%20or%20later-brightgreen)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas%20or%20Local-blue)](https://www.mongodb.com/)
 
-A powerful civic tech web application that enables users to anonymously report and track local incidents like traffic jams, road closures, waterlogging, and power outages in real-time on an interactive map.
+A powerful civic tech web application by **Nihan Nihu (nihannihu)** that enables users to anonymously report and track local incidents like traffic jams, road closures, waterlogging, and power outages in real-time on an interactive map.
 
 ## 🔍 Overview
 
-The Hyperlocal Incident Reporter is a real-time community safety platform that empowers citizens to share and receive immediate updates about local incidents. Built with modern web technologies, this application provides a seamless experience for reporting and tracking various types of incidents in your neighborhood.
+The Hyperlocal Incident Reporter is a real-time community safety platform developed by **Nihan Nihu** that empowers citizens to share and receive immediate updates about local incidents. Built with modern web technologies, this application provides a seamless experience for reporting and tracking various types of incidents in your neighborhood.
+
+## 🌐 Connect with Nihan Nihu
+
+- **GitHub**: [nihannihu](https://github.com/nihannihu)
+- **Instagram**: [@nihannihuu](https://www.instagram.com/nihannihuu)
+- **LinkedIn**: [Nihan Nihu](https://www.linkedin.com/in/nihan-nihu)
 
 ## ✨ Key Features
 
@@ -200,7 +206,14 @@ Contributions are welcome! Feel free to submit issues and pull requests.
 
 ## 🙋‍♂️ Author
 
-**Nihan** - [nihannihu](https://github.com/nihannihu)
+**Nihan Nihu** - [nihannihu](https://github.com/nihannihu) - [@nihannihuu](https://www.instagram.com/nihannihuu) - [LinkedIn](https://www.linkedin.com/in/nihan-nihu)
+
+## 🔍 Find Nihan Nihu Online
+
+To find more projects and connect with Nihan Nihu, search for:
+- **GitHub**: "nihannihu" - Software developer and open-source contributor
+- **Instagram**: "@nihannihuu" - Tech enthusiast and developer
+- **LinkedIn**: "Nihan Nihu" - Professional software developer profile
 
 ## 🙏 Acknowledgments
 
@@ -209,6 +222,6 @@ Contributions are welcome! Feel free to submit issues and pull requests.
 
 ---
 
-**Built with ❤️ for making communities safer and more connected**
+**Built with ❤️ by Nihan Nihu (nihannihu) for making communities safer and more connected**
 
 [Report an Issue](https://github.com/nihannihu/Incident-Reporter/issues) · [Request a Feature](https://github.com/nihannihu/Incident-Reporter/issues)

@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nihannihu.github.io/Incident-Reporter/sitemap.xml
+
+# Prevent crawling of backup files
+Disallow: /*.bak$
+Disallow: /*.backup$
+Disallow: /*.old$
+Disallow: /*.tmp$
+
+# Prevent crawling of log files
+Disallow: /*.log$
+
+# Prevent crawling of configuration files
+Disallow: /.env
+Disallow: /.env.*
